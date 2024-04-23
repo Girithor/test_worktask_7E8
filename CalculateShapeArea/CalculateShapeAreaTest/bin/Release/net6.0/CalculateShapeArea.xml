@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CalculateShapeArea</name>
+    </assembly>
+    <members>
+        <member name="M:CalculateShapeArea.Circle.#ctor(System.Double[])">
+            <summary>
+            Класс для рассчета площади круга по радиусу.
+            </summary>
+            <param name="Side">Массив содержащий в себе радиус круга.</param>
+        </member>
+        <member name="M:CalculateShapeArea.Circle.GetAreaByRadius">
+            <summary>
+            Рассчет площади по радиусу.
+            </summary>
+            <returns>Площадь треугольника</returns>
+        </member>
+        <member name="M:CalculateShapeArea.Shape.SetAdditionalParam(System.String,System.Double)">
+            <summary>
+            Для добавление дополнительных параметров.
+            </summary>
+        </member>
+        <member name="M:CalculateShapeArea.Shape.CalculateArea">
+            <summary>
+            Базовый метод для расчета площади фигуры.
+            </summary>
+            <returns>Площадь фигуры.</returns>
+        </member>
+        <member name="T:CalculateShapeArea.SomeShape">
+            <summary>
+            Класс для поиска площади, если неизвестна фигура, но есть входные данные в виде массива из длин сторон.
+            </summary>
+        </member>
+        <member name="M:CalculateShapeArea.SomeShape.GetArea(System.Double[])">
+            <summary>
+            Поиск площади, если вернулся 0, то значит функциональность по данным параметрам еще не была добавлена.
+            </summary>
+            <param name="side"></param>
+            <returns>Площадь неизвестной фигуры</returns>
+            <exception cref="T:System.NullReferenceException"></exception>
+        </member>
+        <member name="M:CalculateShapeArea.Triangle.#ctor(System.Double[])">
+            <summary>
+            Класс для рассчета площади треугольника.
+            </summary>
+            <returns>Площадь треугольника</returns>
+            <param name="Side">Массив состоящий из длинн 3-х сторон треугольника, если вы считаете, что у вас прямоугольный 
+                треугольник и известно только 2 стороны, то добавьте массив из 3 элементов с 0 в последнем элементе.</param>
+        </member>
+        <member name="M:CalculateShapeArea.Triangle.CalculateArea">
+            <inheritdoc/>
+        </member>
+        <member name="M:CalculateShapeArea.Triangle.GetAreaBy3Side">
+            <summary>
+            Рассчет площади по трем сторонам.
+            </summary>
+            <returns>Площадь треугольника</returns>
+        </member>
+        <member name="M:CalculateShapeArea.Triangle.GetAreaRightTriangleBy2Side(System.Int32,System.Int32)">
+            <summary>
+            Рассчет площади прямоугольного треугольника по двум катетам.
+            </summary>
+            <returns>Площадь треугольника</returns>
+            <param name="sideAIndex">Индекс катета А в массиве сторон, если он не 1-й(отсчет индексов от 0).</param>
+            <param name="sideBIndex">Индекс катета В в массиве сторон, если он не 2-й(отсчет индексов от 0).</param>
+        </member>
+    </members>
+</doc>

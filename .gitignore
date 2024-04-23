@@ -1,0 +1,6 @@
+# Igrone files in folder
+/CampaignDesigner
+
+# Igrone developer's standalone settings.
+/.vs
+**/.vs
